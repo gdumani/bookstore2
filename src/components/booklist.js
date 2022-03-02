@@ -20,7 +20,6 @@ const Booklist = () => {
             />
           );
         })}
-        ;
       </ul>
     </div>
   );

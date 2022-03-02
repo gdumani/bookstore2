@@ -13,7 +13,9 @@ const Addbook = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    const newBook = { id: nextId, title, author: 'author', category };
+    const newBook = {
+      id: nextId, title, author: 'author', category,
+    };
     if (title !== '' && category !== 'Category') {
       dispatch(addBook(newBook));
     }

@@ -25,10 +25,20 @@ const BOOKDATA = [
 const Booklist = () => (
   <div>
     <ul>
-      {BOOKDATA.map((book) => (
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        <Book {...book} />
-      ))}
+      {BOOKDATA.map((book) => {
+        const {
+          id, title, author, category,
+        } = book;
+        return (
+          <Book
+            key={id}
+            {...{
+              id, title, author, category,
+            }}
+          />
+        );
+      })}
+      ;
     </ul>
   </div>
 );

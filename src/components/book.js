@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  const { id, title, author, category } = props;
+  const {
+    id, title, author, category,
+  } = props;
   return (
     <li>
       <h5>{category}</h5>

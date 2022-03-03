@@ -24,8 +24,10 @@ npm v8.3
 Clone the repository: 
 
 `git clone https://github.com/gdumani/bookstore.git`
+
 `cd bookstore`
-`git checkout feat/setup`
+
+`git checkout feat/actions`
 
 Load required npm software
 

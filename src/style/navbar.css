@@ -1,3 +1,33 @@
 .nav {
   display: flex;
+  background-color: white;
+  padding: 1.2rem;
+  width: 87.5rem%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul { 
+  display: flex;
+  list-style: none;
+  color: black;
+  text-transform: uppercase;
+  align-items: center;
+  font-size: .83rem;
+  opacity: .5;
+  margin: 2rem;
+}
+.nav li {
+  padding-right: 2rem;
+}
+
+.nav h1 {
+  font-size: 1.875rem;
+  padding-left: 5rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+.nav img {
+  height: 1rem;
+  align-items: center;
 }

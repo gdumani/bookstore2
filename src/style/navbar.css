@@ -2,21 +2,22 @@
   display: flex;
   background-color: white;
   padding: 1.2rem;
-  width: 87.5rem%;
+  width: 87.5rem;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav ul { 
+.nav ul {
   display: flex;
   list-style: none;
   color: black;
   text-transform: uppercase;
   align-items: center;
-  font-size: .83rem;
-  opacity: .5;
+  font-size: 0.83rem;
+  opacity: 0.5;
   margin: 2rem;
 }
+
 .nav li {
   padding-right: 2rem;
 }
@@ -27,6 +28,7 @@
   font-weight: bold;
   color: #0290ff;
 }
+
 .nav img {
   height: 1rem;
   align-items: center;

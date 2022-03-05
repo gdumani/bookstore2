@@ -6,7 +6,7 @@ import { addBook } from '../redux/books/books';
 const Addbook = () => {
   const tempCats = ['Action', 'Science Fiction', 'Economy', 'Other'];
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  // const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('Category');
 
   // const currentBooks = useSelector((store) => store.booksReducer);
@@ -18,13 +18,14 @@ const Addbook = () => {
     e.preventDefault();
 
     const newBook = {
-      item_id: uuidv4(), title, author, category,
+      item_id: uuidv4(), title, category,
+      // item_id: uuidv4(), title, author, category,
     };
-    if (title !== '' && author !== '' && category !== 'Category') {
+    if (title !== '' && category !== 'Category') {
       dispatch(addBook(newBook));
     }
     setTitle('');
-    setAuthor('');
+    // setAuthor('');
     setCategory('Category');
   };
 
@@ -39,13 +40,13 @@ const Addbook = () => {
           onChange={({ target }) => setTitle(target.value)}
           required
         />
-        <input
+        {/* <input
           type="text"
           placeholder="Author"
           value={author}
           onChange={({ target }) => setAuthor(target.value)}
           required
-        />
+        /> */}
 
         <select
           id="category"

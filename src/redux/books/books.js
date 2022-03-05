@@ -33,7 +33,7 @@ export const addBook = (payload) => async (dispatch) => {
 
 export const removeBook = (id) => async (dispatch) => {
   try {
-    await axios.delete(API_URL+id);
+    await axios.delete(API_URL + id);
     dispatch({
       type: REMOVE_BOOK,
       id,

@@ -9,7 +9,6 @@ const Booklist = () => {
   const dispatch = useDispatch();
   useEffect(() => { dispatch(getBooks()); }, [dispatch]);
 
-  console.log('boolist: ', books);
 
   return (
     <div>
@@ -33,3 +32,4 @@ const Booklist = () => {
 };
 
 export default Booklist;
+

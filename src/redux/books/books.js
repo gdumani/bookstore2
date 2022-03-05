@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import axios from 'axios';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
@@ -18,7 +19,6 @@ export const getBooks = () => async (dispatch) => {
   });
 };
 
-// eslint-disable-next-line consistent-return
 export const addBook = (payload) => async (dispatch) => {
   try {
     await axios.post(API_URL, payload);
@@ -31,10 +31,17 @@ export const addBook = (payload) => async (dispatch) => {
   }
 };
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
+export const removeBook = (id) => async (dispatch) => {
+  try {
+    await axios.delete(API_URL+id);
+    dispatch({
+      type: REMOVE_BOOK,
+      id,
+    });
+  } catch (error) {
+    return error;
+  }
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

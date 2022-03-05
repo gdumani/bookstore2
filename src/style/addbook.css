@@ -1,0 +1,22 @@
+.addform {
+    width: 85%;
+    margin: auto;
+    margin-bottom: .5rem;
+    padding-bottom: 1rem; 
+    border-top: solid grey;
+    border-width: 2px;
+}
+
+.addform input {
+    width: 40%;
+}
+
+.addform input, select, button {
+    padding: .5rem;
+    margin-right: 1rem;
+}
+
+.addform button {
+    background-color:#0290ff;
+    color: white;
+}

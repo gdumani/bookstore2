@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 const Addbook = () => {
   const tempCats = ['Action', 'Science Fiction', 'Economy', 'Other'];
   const [title, setTitle] = useState('');
+  // const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('Category');
-  const currentBooks = useSelector((state) => state.booksReducer);
-  const nextId = currentBooks[currentBooks.length - 1].id + 1;
+
+  // const currentBooks = useSelector((store) => store.booksReducer);
+  // console.log(currentBooks)
 
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
     e.preventDefault();
+
     const newBook = {
-      id: nextId, title, author: 'author', category,
+      item_id: uuidv4(), title, category,
+      // item_id: uuidv4(), title, author, category,
     };
     if (title !== '' && category !== 'Category') {
       dispatch(addBook(newBook));
     }
     setTitle('');
+    // setAuthor('');
     setCategory('Category');
   };
 
@@ -32,13 +38,22 @@ const Addbook = () => {
           placeholder="Book Title"
           value={title}
           onChange={({ target }) => setTitle(target.value)}
+          required
         />
+        {/* <input
+          type="text"
+          placeholder="Author"
+          value={author}
+          onChange={({ target }) => setAuthor(target.value)}
+          required
+        /> */}
 
         <select
           id="category"
           name="category"
           defaultValue={category}
           onChange={({ target }) => setCategory(target.value)}
+          required
         >
           <option value={category} disabled>Category</option>
           {tempCats.map((category) => (

@@ -9,7 +9,6 @@ const Booklist = () => {
   const dispatch = useDispatch();
   useEffect(() => { dispatch(getBooks()); }, [dispatch]);
 
-
   return (
     <div>
       <ul>
@@ -32,4 +31,3 @@ const Booklist = () => {
 };
 
 export default Booklist;
-

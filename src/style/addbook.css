@@ -22,3 +22,8 @@ button {
   background-color: #0290ff;
   color: white;
 }
+.addform form {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

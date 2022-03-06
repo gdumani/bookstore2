@@ -2,10 +2,10 @@
   display: flex;
   background-color: white;
   padding: 1.2rem;
-  width: 95%%;
+  width: 95%;
   align-items: center;
   justify-content: space-between;
-  margin:auto;
+  margin: auto;
 }
 
 .nav ul {
